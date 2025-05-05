@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Agjent</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function loginAgent(e) {
+      e.preventDefault();
+      const name = document.getElementById("agentName").value;
+      if (name.trim() !== "") {
+        localStorage.setItem("emriAgjentit", name); // emër për ruajtje
+        window.location.href = "confirm.html";      // ridrejtim te faqja e konfirmimit
+      } else {
+        alert("Ju lutem shkruani emrin.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Hyrje për Agjentët</h2>
+  <form onsubmit="loginAgent(event)">
+    <label for="agentName">Emri:</label>
+    <input type="text" id="agentName" name="agentName" required>
+    <button type="submit">Hyr</button>
+  </form>
+</body>
+</html>

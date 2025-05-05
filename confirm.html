@@ -1,0 +1,30 @@
+<!-- confirm.html -->
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <title>Konfirmimi i çantës</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <form id="confirmationForm">
+    <h2>Konfirmo pajisjet</h2>
+    <label>Numri i çantës:
+      <select id="numriCantës" required>
+        <option value="">Zgjidh një çantë</option>
+        <option value="5">Çanta 5</option>
+        <option value="8">Çanta 8</option>
+        <option value="11">Çanta 11</option>
+      </select>
+    </label>
+    <label><input type="checkbox" name="tds" required> TDS</label>
+    <label><input type="checkbox" name="elektrolize" required> Elektrolizë</label>
+    <label><input type="checkbox" name="kontrate" required> Dosje kontrate</label>
+    <label><input type="checkbox" name="numra" required> Dosje numrash</label>
+    <label><input type="checkbox" name="mandat" required> Mandat</label>
+    <button type="submit">Konfirmo</button>
+  </form>
+
+  <script src="js/agent.js"></script>
+</body>
+</html>

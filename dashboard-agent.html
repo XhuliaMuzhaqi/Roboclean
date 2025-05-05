@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <title>Paneli i Agjentit</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    window.onload = () => {
+      const name = localStorage.getItem("agentName");
+      if (!name) {
+        window.location.href = "login-agent.html";
+      } else {
+        document.getElementById("welcome").textContent = `Mirësevjen, ${name}!`;
+      }
+    };
+  </script>
+</head>
+<body>
+  <h2 id="welcome">Mirësevjen, Agjent!</h2>
+  <form>
+    <label for="bagId">Zgjidh Çantën:</label>
+    <select id="bagId">
+      <option value="5">Çanta 5</option>
+      <option value="8">Çanta 8</option>
+      <option value="11">Çanta 11</option>
+    </select><br><br>
+
+    <label><input type="checkbox"> TDS</label><br>
+    <label><input type="checkbox"> Elektrolizë</label><br>
+    <label><input type="checkbox"> Dosje kontrate</label><br>
+    <label><input type="checkbox"> Dosje numrash</label><br>
+    <label><input type="checkbox"> Mandat</label><br><br>
+
+    <button type="submit">Konfirmo</button>
+  </form>
+
+  <h3>Historiku i konfirmimeve</h3>
+  <p>()</p>
+</body>
+</html>

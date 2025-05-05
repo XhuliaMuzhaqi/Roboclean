@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function loginAdmin(e) {
+      e.preventDefault();
+      const name = document.getElementById("adminName").value;
+      const pass = document.getElementById("adminPass").value;
+      if (name === "Rigert Rrodhe" && pass === "Drejtori123") {
+        window.location.href = "dashboard-admin.html"; // Redirektim në faqen kryesore të admin
+      } else {
+        alert("Emri ose fjalëkalimi i pasaktë!");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Hyrje për Administratorin</h2>
+    <form onsubmit="loginAdmin(event)">
+      <div class="input-group">
+        <label for="adminName">Emri:</label>
+        <input type="text" id="adminName" required>
+      </div>
+      <div class="input-group">
+        <label for="adminPass">Fjalëkalimi:</label>
+        <input type="password" id="adminPass" required>
+      </div>
+      <button type="submit">Hyr</button>
+    </form>
+  </div>
+</body>
+</html>
